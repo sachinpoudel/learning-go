@@ -4,7 +4,26 @@ package main
  // in simple terms, interfaces allow us to define behavior that can be shared across different types without requiring them to be related through a common ancestor.
 
 import "fmt"
+
+type paymenter interface {
+	pay(amount float32)
+}
+type payment struct{
+	gateway paymenter
+}
+
+func (p payment) makePayment(amount float32){
+	p.gateway.pay(amount)
+}
+
+type razorpay struct{}
+
+func (r razorpay) pay(amount float32){
+	fmt.Println("makingpayment through razorpay", amount)
+} // here we dotn explicitly say we are implementing paymenter interface
+
+
 func main(){
 
+
 }
-  

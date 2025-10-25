@@ -1,6 +1,11 @@
 package main
 import "fmt"
 import "slices"
+
+//slices in go are used to represent a sequence of elements of the same type.
+// A slice is a dynamically-sized, flexible view into the elements of an array.
+// Slices are more powerful than arrays because they can grow and shrink in size as needed.
+// Slices are defined using square brackets [] followed by the type of elements they contain.
 func main() {
 	var fruits []string
 	fruits = append(fruits, "Apple")
