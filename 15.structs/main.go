@@ -1,5 +1,7 @@
 package main
 //struct in go is used to group related data together to form a record.
+// A struct is a composite data type that allows you to define a collection of fields, each with its own name and type.
+// Structs are defined using the "type" keyword followed by the struct name and the "struct" keyword.
 import "fmt"
 
 type customer struct {
